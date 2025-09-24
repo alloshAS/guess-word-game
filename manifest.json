@@ -1,7 +1,7 @@
 {
-  "name": "3loush Site",
-  "short_name": "3loush",
-  "start_url": "/3loush/",
+  "name": "guess word game",
+  "short_name": "guess word",
+  "start_url": "/guess-word-game/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
