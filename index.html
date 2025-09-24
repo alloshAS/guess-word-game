@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content=" A simple word guessing game built with HTML, CSS, and JavaScript."
+    />
+    <meta name="keywords" content="word,guess,game,html,css,javascript" />
+    <meta name="author" content="Ali Alkasem" />
+    <meta name="copyright" content="Ali Alkasem" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="theme-color" content="#4caf50" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Word Guess Game" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="website icon" type="jpg" href="images/bg1.jpg" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title></title>
+  </head>
+  <body>
+    <div class="start-screen">
+      <div class="showContainer">
+        <div class="showWord">
+          <span>butter</span>
+          <span>cheese</span>
+          <span>pickle</span>
+          <span>tomato</span>
+          <span>banana</span>
+          <span>pepper</span>
+          <span>walnut</span>
+          <span>cashew</span>
+          <span>shrimp</span>
+          <span>salmon</span>
+          <span>onions</span>
+          <span>garlic</span>
+          <span>radish</span>
+          <span>potato</span>
+          <span>carrot</span>
+          <span>coffee</span>
+          <span>cereal</span>
+          <span>bagels</span>
+          <span>noodle</span>
+          <span>papaya</span>
+          <span>mangos</span>
+          <span>grapes</span>
+          <span>cherry</span>
+          <span>orange</span>
+          <span>apples</span>
+          <span>peanut</span>
+          <span>almond</span>
+          <span>sesame</span>
+          <span>brazil</span>
+          <span>waffle</span>
+          <span>donuts</span>
+          <span>pastry</span>
+          <span>cookie</span>
+          <span>yogurt</span>
+          <span>quiche</span>
+          <span>scones</span>
+          <span>spices</span>
+          <span>ginger</span>
+          <span>lemony</span>
+          <span>herbal</span>
+          <span>sugarc</span>
+          <span>honeyd</span>
+          <span>pizzas</span>
+          <span>burger</span>
+          <span>tacous</span>
+          <span>falcon</span>
+          <span>kabobs</span>
+          <span>butchi</span>
+          <span>lattea</span>
+          <span>banana</span>
+        </div>
+        <button class="close">Close</button>
+      </div>
+      <!-- difficulty -->
+      <h1></h1>
+      <p class="dif">Choose A Difficulty Level</p>
+      <div class="difficulties">
+        <button class="difficulty-btn active" data-difficulty="Easy">
+          Easy
+        </button>
+        <button class="difficulty-btn" data-difficulty="Medium">Medium</button>
+        <button class="difficulty-btn" data-difficulty="Hard">Hard</button>
+        <button class="difficulty-btn" data-difficulty="Extreme">
+          Extreme
+        </button>
+      </div>
+      <p class="dif">
+        You Have <span class="try"></span> Attempts To Guess The Word With
+        <span class="Letter"></span> Letters And You Can Use
+        <span class="hinT"></span> Hints
+      </p>
+      <button class="show-words">
+        Show All Words <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button class="start-game">
+        Start Game <i class="fas fa-gamepad"></i>
+      </button>
+    </div>
+    <!-- game -->
+    <h2 class="title"></h2>
+    <div class="info">
+      <p class="difficulty">Easy</p>
+      <p class="tries"></p>
+      <p class="hinT"></p>
+    </div>
+    <div class="guess-game">
+      <div class="game-area">
+        <div class="inputs"></div>
+        <div class="control">
+          <button class="check">
+            Check Word <i class="fas fa-spell-check"></i>
+          </button>
+          <button class="hint">
+            <span></span> <i class="fas fa-lightbulb"></i>
+          </button>
+        </div>
+        <div class="message">
+          <button class="reload">Play again</button>
+          <button class="shareBtn">Share</button>
+        </div>
+      </div>
+      <div class="key-colors">
+        <h2>Key Colors <i class="fas fa-palette"></i></h2>
+        <div class="key-color">
+          <div class="key in-place"></div>
+          <div class="key-text">Letter Is Correct and In place</div>
+        </div>
+
+        <div class="key-color">
+          <div class="key not-in-place"></div>
+          <div class="key-text">Letter Is Correct But Not In place</div>
+        </div>
+
+        <div class="key-color">
+          <div class="key no"></div>
+          <div class="key-text">Letter Is Wrong</div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <audio src="audio/success.mp3"></audio>
+    <audio src="audio/fail.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
