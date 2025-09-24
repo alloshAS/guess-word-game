@@ -216,13 +216,13 @@ reloadButton.addEventListener("click", function () {
 
 shareBtn.addEventListener("click", function () {
   const result =
-    "🎯 I played Guess Word Game!\n✅✅⬜️⬜️⬜️\nTry it: https://guess-word-game-b-3lloush.netlify.app/";
+    "🎯 I played Guess Word Game!\n✅✅⬜️⬜️⬜️\nTry it: https://alloshas.github.io/guess-word-game/";
 
   if (navigator.share) {
     navigator.share({
       title: "Guess Word Game",
       text: result,
-      url: "https://guess-word-game-b-3lloush.netlify.app/",
+      url: "https://alloshas.github.io/guess-word-game/",
     });
   } else {
     navigator.clipboard.writeText(result);
@@ -374,3 +374,4 @@ document.addEventListener("keydown", handleBackspace);
 window.onload = function () {
   generateInput();
 };
+
