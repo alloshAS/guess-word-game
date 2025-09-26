@@ -148,7 +148,7 @@ Potential improvements for future versions:
 ## Credits
 
 - **Original Game**: Ali Alkasem
-- **Enhanced Version**: AI-Enhanced with multilingual support and improved features
+- **Enhanced Version**: Enhanced with multilingual support and improved features
 - **Year**: 2025
 
 ## License
