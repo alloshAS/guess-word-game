@@ -156,8 +156,11 @@ function setupEventListeners() {
   document.querySelector(".close").addEventListener("click", closeWordsModal);
   document.querySelector(".check").addEventListener("click", handleGuesses);
   document.querySelector(".hint").addEventListener("click", getHint);
-  const reloadBtn = document.querySelector(".reload").addEventListener("click", () => window.location.reload());
-  const shareBtn = document.querySelector(".shareBtn").addEventListener("click", shareGame);
+ const reloadBtn = document.querySelector(".reload");
+ reloadBtn.addEventListener("click", () => window.location.reload());
+
+ const shareBtn = document.querySelector(".shareBtn");
+ shareBtn.addEventListener("click", shareGame);
   
   // Keyboard events
   document.addEventListener("keydown", handleBackspace);
@@ -368,6 +371,13 @@ function showWinMessage() {
   audio.src = "audio/success.mp3";
   audio.play().catch(() => {}); // Ignore audio errors
 
+  // Show stats
+  messageArea.innerHTML = `
+    <p>Difficulty: <span>${activeDifficulty}</span></p>
+    <p>You Win! The word is <span>${wordToGuess.toUpperCase()}</span></p>
+    <p>You guessed the word in ${currentTry} ${currentTry === 1 ? "try" : "tries"}!</p>
+  `;
+  
   // Disable all inputs and buttons
   document.querySelectorAll(".inputs > div").forEach((tryDiv) => 
     tryDiv.classList.add("disabled-inputs"));
@@ -377,15 +387,6 @@ function showWinMessage() {
   messageArea.appendChild(shareBtn);
   messageArea.appendChild(reloadBtn);
   
-  // Show stats
-  messageArea.innerHTML = `
-    <p>Difficulty: <span>${activeDifficulty}</span></p>
-    <p>You Win! The word is <span>${wordToGuess.toUpperCase()}</span></p>
-    <p>You guessed the word in ${currentTry} ${currentTry === 1 ? "try" : "tries"}!</p>
-  `;
-  
-
-
 }
 
 // Handle next try
@@ -508,6 +509,7 @@ window.onload = function () {
   updateDifficultySettings();
   document.querySelector(".hint span").innerHTML = numberOfHints;
 };
+
 
 
 
