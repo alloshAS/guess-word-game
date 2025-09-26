@@ -796,3 +796,308 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+
+/* Enhanced UI Elements */
+.home-btn, .settings-btn {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  margin: 0 5px;
+}
+
+.home-btn:hover, .settings-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.achievements-btn {
+  background: linear-gradient(135deg, var(--warning-color), #ff9f43);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  margin: 10px 5px;
+}
+
+.achievements-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.settings-modal, .achievements-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+  backdrop-filter: blur(20px);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--dark-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.settings-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.setting-item:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-1px);
+}
+
+.setting-item label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.setting-item input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.share-game-btn, .rate-game-btn, .reset-stats-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.share-game-btn:hover, .rate-game-btn:hover, .reset-stats-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.reset-stats-btn {
+  background: linear-gradient(135deg, var(--danger-color), #e55656);
+}
+
+.close-settings, .close-achievements {
+  background: linear-gradient(135deg, var(--dark-color), #34495e);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 20px;
+  width: 100%;
+}
+
+.close-settings:hover, .close-achievements:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Achievements List */
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.achievement-item.unlocked {
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.3), rgba(78, 205, 196, 0.1));
+  border: 2px solid var(--success-color);
+}
+
+.achievement-item.locked {
+  background: rgba(200, 200, 200, 0.3);
+  color: #666;
+}
+
+.achievement-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+  width: 50px;
+  text-align: center;
+}
+
+.achievement-info {
+  flex: 1;
+}
+
+.achievement-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.achievement-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.achievement-progress {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Timer and Score Enhancements */
+#timer-value {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+#score-value {
+  font-weight: 700;
+  color: var(--success-color);
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes scoreIncrease {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    color: var(--warning-color);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score-animation {
+  animation: scoreIncrease 0.5s ease-out;
+}
+
+/* Responsive Design for New Elements */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .settings-options {
+    gap: 15px;
+  }
+  
+  .setting-item {
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .share-game-btn, .rate-game-btn, .reset-stats-btn {
+    width: 100%;
+  }
+  
+  .achievement-item {
+    padding: 12px;
+  }
+  
+  .achievement-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .home-btn, .settings-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 20px 10px 30px;
+  }
+  
+  .control {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .home-btn, .settings-btn, .achievements-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
