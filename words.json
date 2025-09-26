@@ -1,15 +1,31 @@
 {
-  "words": [
-    "animal", "banana", "camera", "dancer", "eleven", "flower", "guitar", "hammer", "island", "jacket",
-    "kitten", "ladder", "magnet", "number", "orange", "pencil", "rabbit", "sunset", "turtle", "violin",
-    "window", "yellow", "zipper", "bridge", "castle", "dinner", "engine", "forest", "garden", "health",
-    "insect", "jungle", "knight", "laptop", "market", "needle", "oxygen", "planet", "quartz", "rocket",
-    "sphere", "tablet", "unique", "volume", "wizard", "yellow", "anchor", "bottle", "cactus", "desert",
-    "eagle", "falcon", "glider", "harbor", "igloo", "jester", "koala", "lizard", "muffin", "noodle",
-    "onion", "pepper", "quiche", "raisin", "salmon", "tomato", "unicorn", "valley", "walnut", "xenon",
-    "yogurt", "zebra", "avenue", "breeze", "canyon", "diesel", "exotic", "fossil", "gravel", "horror",
-    "impact", "jigsaw", "kidney", "luxury", "maze", "nectar", "orbit", "pirate", "quokka", "rhythm",
-    "soccer", "temple", "urgent", "violet", "waffle", "yacht", "zombie", "across", "beyond", "cherry",
-    "divine", "escape", "fluent", "gossip", "humble", "insane", "joyful", "keeper", "legend", "marine"
-  ]
+  "languages": {
+    "en": {
+      "name": "English",
+      "categories": {
+        "food": ["apple", "bread", "cheese", "pizza", "pasta", "rice", "fish", "meat", "milk", "honey", "sugar", "salt", "pepper", "onion", "garlic", "tomato", "potato", "carrot", "banana", "orange", "grape", "lemon", "mango", "berry", "cake", "cookie"],
+        "animals": ["cat", "dog", "bird", "fish", "horse", "cow", "pig", "sheep", "goat", "duck", "chicken", "rabbit", "mouse", "rat", "bear", "wolf", "fox", "deer", "lion", "tiger", "elephant", "monkey", "snake", "frog", "turtle"],
+        "cities": ["london", "paris", "tokyo", "dubai", "rome", "cairo", "berlin", "madrid", "moscow", "sydney", "toronto", "mumbai", "seoul", "bangkok", "lagos", "mexico", "lima", "bogota", "vienna", "prague", "athens", "oslo", "stockholm", "helsinki", "warsaw"],
+        "countries": ["usa", "canada", "france", "germany", "japan", "china", "india", "brazil", "russia", "egypt", "italy", "spain", "mexico", "turkey", "greece", "poland", "sweden", "norway", "finland", "denmark", "belgium", "holland", "austria", "swiss", "ireland"],
+        "professions": ["doctor", "nurse", "teacher", "lawyer", "engineer", "pilot", "chef", "artist", "writer", "actor", "singer", "dancer", "farmer", "fisher", "builder", "driver", "police", "fireman", "soldier", "judge", "banker", "clerk", "waiter", "barber", "tailor"],
+        "colors": ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "black", "white", "gray", "silver", "gold", "violet", "indigo", "cyan", "magenta", "maroon", "navy", "olive", "lime", "aqua", "teal", "coral", "salmon"],
+        "sports": ["soccer", "tennis", "golf", "boxing", "rugby", "hockey", "cricket", "baseball", "volleyball", "basketball", "swimming", "running", "cycling", "skiing", "surfing", "diving", "rowing", "sailing", "archery", "fencing", "judo", "karate", "yoga", "dance", "chess"],
+        "nature": ["tree", "flower", "grass", "leaf", "branch", "root", "seed", "fruit", "forest", "jungle", "desert", "ocean", "river", "lake", "mountain", "hill", "valley", "beach", "island", "cave", "rock", "stone", "sand", "soil", "cloud"]
+      }
+    },
+    "ar": {
+      "name": "العربية",
+      "categories": {
+        "طعام": ["تفاح", "خبز", "جبن", "بيتزا", "معكرونة", "أرز", "سمك", "لحم", "حليب", "عسل", "سكر", "ملح", "فلفل", "بصل", "ثوم", "طماطم", "بطاطس", "جزر", "موز", "برتقال", "عنب", "ليمون", "مانجو", "توت", "كعك", "بسكويت"],
+        "حيوانات": ["قطة", "كلب", "طائر", "سمكة", "حصان", "بقرة", "خنزير", "خروف", "ماعز", "بطة", "دجاجة", "أرنب", "فأر", "جرذ", "دب", "ذئب", "ثعلب", "غزال", "أسد", "نمر", "فيل", "قرد", "ثعبان", "ضفدع", "سلحفاة"],
+        "مدن": ["لندن", "باريس", "طوكيو", "دبي", "روما", "القاهرة", "برلين", "مدريد", "موسكو", "سيدني", "تورونتو", "مومباي", "سيول", "بانكوك", "لاغوس", "مكسيكو", "ليما", "بوغوتا", "فيينا", "براغ", "أثينا", "أوسلو", "ستوكهولم", "هلسنكي", "وارسو"],
+        "دول": ["أمريكا", "كندا", "فرنسا", "ألمانيا", "اليابان", "الصين", "الهند", "البرازيل", "روسيا", "مصر", "إيطاليا", "إسبانيا", "المكسيك", "تركيا", "اليونان", "بولندا", "السويد", "النرويج", "فنلندا", "الدنمارك", "بلجيكا", "هولندا", "النمسا", "سويسرا", "أيرلندا"],
+        "مهن": ["طبيب", "ممرضة", "معلم", "محامي", "مهندس", "طيار", "طباخ", "فنان", "كاتب", "ممثل", "مغني", "راقص", "مزارع", "صياد", "بناء", "سائق", "شرطي", "إطفائي", "جندي", "قاضي", "مصرفي", "كاتب", "نادل", "حلاق", "خياط"],
+        "ألوان": ["أحمر", "أزرق", "أخضر", "أصفر", "برتقالي", "بنفسجي", "وردي", "بني", "أسود", "أبيض", "رمادي", "فضي", "ذهبي", "بنفسجي", "نيلي", "سماوي", "أرجواني", "كستنائي", "كحلي", "زيتوني", "ليموني", "مائي", "تركوازي", "مرجاني", "سلموني"],
+        "رياضة": ["كرة قدم", "تنس", "جولف", "ملاكمة", "رجبي", "هوكي", "كريكت", "بيسبول", "كرة طائرة", "كرة سلة", "سباحة", "جري", "دراجات", "تزلج", "ركوب أمواج", "غوص", "تجديف", "إبحار", "رماية", "مبارزة", "جودو", "كاراتيه", "يوجا", "رقص", "شطرنج"],
+        "طبيعة": ["شجرة", "زهرة", "عشب", "ورقة", "غصن", "جذر", "بذرة", "فاكهة", "غابة", "أدغال", "صحراء", "محيط", "نهر", "بحيرة", "جبل", "تل", "وادي", "شاطئ", "جزيرة", "كهف", "صخرة", "حجر", "رمل", "تربة", "سحابة"]
+      }
+    }
+  }
 }
+
