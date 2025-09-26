@@ -97,6 +97,8 @@
       <p class="difficulty">Easy</p>
       <p class="tries"></p>
       <p class="hinT"></p>
+      <p class="score">Score: <span id="score-value">0</span></p>
+      <p class="timer">Time: <span id="timer-value">00:00</span></p>
     </div>
     
     <div class="guess-game">
@@ -109,10 +111,17 @@
           <button class="hint">
             <span></span> <i class="fas fa-lightbulb"></i>
           </button>
+          <button class="home-btn">
+            <i class="fas fa-home"></i> Home
+          </button>
+          <button class="settings-btn">
+            <i class="fas fa-cog"></i> Settings
+          </button>
         </div>
         <div class="message">
           <button class="reload">Play again</button>
           <button class="shareBtn">Share</button>
+          <button class="achievements-btn">Achievements</button>
         </div>
       </div>
       
@@ -132,6 +141,48 @@
           <div class="key no"></div>
           <div class="key-text">Letter Is Wrong</div>
         </div>
+      </div>
+    </div>
+    
+    <!-- Settings Modal -->
+    <div class="settings-modal" style="display: none;">
+      <div class="modal-content">
+        <h2>Settings <i class="fas fa-cog"></i></h2>
+        <div class="settings-options">
+          <div class="setting-item">
+            <label>
+              <input type="checkbox" id="sound-toggle" checked>
+              <span>Enable Sound Effects</span>
+            </label>
+          </div>
+          <div class="setting-item">
+            <button class="share-game-btn">
+              <i class="fas fa-share"></i> Share Game
+            </button>
+          </div>
+          <div class="setting-item">
+            <button class="rate-game-btn">
+              <i class="fas fa-star"></i> Rate Game
+            </button>
+          </div>
+          <div class="setting-item">
+            <button class="reset-stats-btn">
+              <i class="fas fa-trash"></i> Reset Statistics
+            </button>
+          </div>
+        </div>
+        <button class="close-settings">Close</button>
+      </div>
+    </div>
+    
+    <!-- Achievements Modal -->
+    <div class="achievements-modal" style="display: none;">
+      <div class="modal-content">
+        <h2>Achievements <i class="fas fa-trophy"></i></h2>
+        <div class="achievements-list">
+          <!-- Achievements will be populated dynamically -->
+        </div>
+        <button class="close-achievements">Close</button>
       </div>
     </div>
     
