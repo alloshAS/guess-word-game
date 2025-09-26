@@ -156,8 +156,8 @@ function setupEventListeners() {
   document.querySelector(".close").addEventListener("click", closeWordsModal);
   document.querySelector(".check").addEventListener("click", handleGuesses);
   document.querySelector(".hint").addEventListener("click", getHint);
-  document.querySelector(".reload").addEventListener("click", () => window.location.reload());
-  document.querySelector(".shareBtn").addEventListener("click", shareGame);
+  const reloadBtn = document.querySelector(".reload").addEventListener("click", () => window.location.reload());
+  const shareBtn = document.querySelector(".shareBtn").addEventListener("click", shareGame);
   
   // Keyboard events
   document.addEventListener("keydown", handleBackspace);
@@ -374,15 +374,16 @@ function showWinMessage() {
     <p>You Win! The word is <span>${wordToGuess.toUpperCase()}</span></p>
     <p>You guessed the word in ${currentTry} ${currentTry === 1 ? "try" : "tries"}!</p>
   `;
-
-  messageArea.appendChild(document.querySelector(".shareBtn"));
-  messageArea.appendChild(document.querySelector(".reload"));
-
+  
   // Disable all inputs and buttons
   document.querySelectorAll(".inputs > div").forEach((tryDiv) => 
     tryDiv.classList.add("disabled-inputs"));
   document.querySelector(".check").disabled = true;
   document.querySelector(".hint").disabled = true;
+
+  messageArea.appendChild(shareBtn);
+  messageArea.appendChild(reloadBtn);
+
 }
 
 // Handle next try
@@ -428,8 +429,8 @@ function showLoseMessage() {
     <p>You Lose! The word is <span>${wordToGuess.toUpperCase()}</span></p>
   `;
 
-  messageArea.appendChild(document.querySelector(".shareBtn"));
-  messageArea.appendChild(document.querySelector(".reload"));
+  messageArea.appendChild(shareBtn);
+  messageArea.appendChild(reloadBtn);
 }
 
 // Get hint
@@ -505,4 +506,5 @@ window.onload = function () {
   updateDifficultySettings();
   document.querySelector(".hint span").innerHTML = numberOfHints;
 };
+
 
