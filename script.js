@@ -368,6 +368,15 @@ function showWinMessage() {
   audio.src = "audio/success.mp3";
   audio.play().catch(() => {}); // Ignore audio errors
 
+  // Disable all inputs and buttons
+  document.querySelectorAll(".inputs > div").forEach((tryDiv) => 
+    tryDiv.classList.add("disabled-inputs"));
+  document.querySelector(".check").disabled = true;
+  document.querySelector(".hint").disabled = true;
+  
+  messageArea.appendChild(shareBtn);
+  messageArea.appendChild(reloadBtn);
+  
   // Show stats
   messageArea.innerHTML = `
     <p>Difficulty: <span>${activeDifficulty}</span></p>
@@ -375,14 +384,7 @@ function showWinMessage() {
     <p>You guessed the word in ${currentTry} ${currentTry === 1 ? "try" : "tries"}!</p>
   `;
   
-  // Disable all inputs and buttons
-  document.querySelectorAll(".inputs > div").forEach((tryDiv) => 
-    tryDiv.classList.add("disabled-inputs"));
-  document.querySelector(".check").disabled = true;
-  document.querySelector(".hint").disabled = true;
 
-  messageArea.appendChild(shareBtn);
-  messageArea.appendChild(reloadBtn);
 
 }
 
@@ -506,5 +508,6 @@ window.onload = function () {
   updateDifficultySettings();
   document.querySelector(".hint span").innerHTML = numberOfHints;
 };
+
 
 
