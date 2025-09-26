@@ -222,7 +222,7 @@ function updateGameTitle() {
   document.title = gameName;
   document.querySelector("h1").innerText = gameName;
   document.querySelector(".title").innerText = gameName;
-  document.querySelector("footer").innerText = `${gameName} | Enhanced by AI | Original by Ali Alkasem | All Rights Reserved © 2025`;
+  document.querySelector("footer").innerText = `${gameName} | Created by Ali Alkasem | All Rights Reserved © 2025`;
 }
 
 // Setup event listeners
@@ -1050,4 +1050,5 @@ window.onload = function () {
   `;
   document.head.appendChild(style);
 };
+
 
