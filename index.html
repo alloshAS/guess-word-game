@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content=" A simple word guessing game built by Ali Alkasem"
+      content="A multilingual word guessing game with categories - Built by Ali Alkasem"
     />
-    <meta name="keywords" content="word,guess,game,html,css,javascript" />
+    <meta name="keywords" content="word,guess,game,multilingual,categories,html,css,javascript" />
     <meta name="author" content="Ali Alkasem" />
     <meta name="copyright" content="Ali Alkasem" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
-    <meta name="theme-color" content="#4caf50" />
+    <meta name="theme-color" content="#667eea" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
@@ -38,61 +38,32 @@
     <div class="start-screen">
       <div class="showContainer">
         <div class="showWord">
-          <span>butter</span>
-          <span>cheese</span>
-          <span>pickle</span>
-          <span>tomato</span>
-          <span>banana</span>
-          <span>pepper</span>
-          <span>walnut</span>
-          <span>cashew</span>
-          <span>shrimp</span>
-          <span>salmon</span>
-          <span>onions</span>
-          <span>garlic</span>
-          <span>radish</span>
-          <span>potato</span>
-          <span>carrot</span>
-          <span>coffee</span>
-          <span>cereal</span>
-          <span>bagels</span>
-          <span>noodle</span>
-          <span>papaya</span>
-          <span>mangos</span>
-          <span>grapes</span>
-          <span>cherry</span>
-          <span>orange</span>
-          <span>apples</span>
-          <span>peanut</span>
-          <span>almond</span>
-          <span>sesame</span>
-          <span>brazil</span>
-          <span>waffle</span>
-          <span>donuts</span>
-          <span>pastry</span>
-          <span>cookie</span>
-          <span>yogurt</span>
-          <span>quiche</span>
-          <span>scones</span>
-          <span>spices</span>
-          <span>ginger</span>
-          <span>lemony</span>
-          <span>herbal</span>
-          <span>sugarc</span>
-          <span>honeyd</span>
-          <span>pizzas</span>
-          <span>burger</span>
-          <span>tacous</span>
-          <span>falcon</span>
-          <span>kabobs</span>
-          <span>butchi</span>
-          <span>lattea</span>
-          <span>banana</span>
+          <!-- Words will be populated dynamically -->
         </div>
         <button class="close">Close</button>
       </div>
-      <!-- difficulty -->
+      
+      <!-- Game Title -->
       <h1></h1>
+      
+      <!-- Language Selector -->
+      <div class="language-selector">
+        <label for="language-select">Choose Language:</label>
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+      
+      <!-- Category Selector -->
+      <div class="category-selector">
+        <label for="category-select">Choose Category:</label>
+        <select id="category-select">
+          <!-- Categories will be populated dynamically -->
+        </select>
+      </div>
+      
+      <!-- Difficulty Selection -->
       <p class="dif">Choose A Difficulty Level</p>
       <div class="difficulties">
         <button class="difficulty-btn active" data-difficulty="Easy">
@@ -104,25 +75,30 @@
           Extreme
         </button>
       </div>
+      
       <p class="dif">
         You Have <span class="try"></span> Attempts To Guess The Word With
         <span class="Letter"></span> Letters And You Can Use
         <span class="hinT"></span> Hints
       </p>
+      
       <button class="show-words">
         Show All Words <i class="fa-solid fa-magnifying-glass"></i>
       </button>
+      
       <button class="start-game">
         Start Game <i class="fas fa-gamepad"></i>
       </button>
     </div>
-    <!-- game -->
+    
+    <!-- Game Area -->
     <h2 class="title"></h2>
     <div class="info">
       <p class="difficulty">Easy</p>
       <p class="tries"></p>
       <p class="hinT"></p>
     </div>
+    
     <div class="guess-game">
       <div class="game-area">
         <div class="inputs"></div>
@@ -139,6 +115,7 @@
           <button class="shareBtn">Share</button>
         </div>
       </div>
+      
       <div class="key-colors">
         <h2>Key Colors <i class="fas fa-palette"></i></h2>
         <div class="key-color">
@@ -157,19 +134,21 @@
         </div>
       </div>
     </div>
+    
     <footer></footer>
+    
     <audio src="audio/success.mp3"></audio>
     <audio src="audio/fail.mp3"></audio>
+    
     <script>
       if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-     .register("sw.js")
-     .then((reg) => console.log("Service Worker Registered"))
-     .catch((err) => console.error("Service Worker Error", err));
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("Service Worker Registered"))
+          .catch((err) => console.error("Service Worker Error", err));
       }
     </script>
     <script src="script.js"></script>
   </body>
 </html>
-
 
